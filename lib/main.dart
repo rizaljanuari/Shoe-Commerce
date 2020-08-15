@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         textTheme: TextTheme(
           headline1: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          headline2: TextStyle(fontSize: 16),
-          headline3: TextStyle(fontSize: 12, fontFamily: 'Poppins'),
+          headline2: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+          headline3: TextStyle(fontSize: 12),
 
         ),
         // This makes the visual density adapt to the platform that you run

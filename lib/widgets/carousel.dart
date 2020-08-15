@@ -5,9 +5,9 @@ class Carousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200.0,
+      height: 160.0,
       child: CarouselSlider(
-        options: CarouselOptions(height: 200.0),
+        options: CarouselOptions(height: 160.0),
         items: [1, 2, 3].map((i) {
           return Builder(
             builder: (BuildContext context) {

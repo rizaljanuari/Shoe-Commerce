@@ -1,9 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:shoe_commerce/widgets/drawer.dart';
-import 'package:shoe_commerce/widgets/search_bar.dart';
-import 'package:shoe_commerce/widgets/carousel.dart';
+import 'homepage.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int _selectedIndex = 0;
+  List<Widget> _widgetOptions = <Widget>[
+    HomePage(),
+    Text('test'),
+    Text('world'),
+  ];
+
+  void _onItemTap(int index){
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,17 +50,31 @@ class HomeScreen extends StatelessWidget {
       drawer: SideDrawer(),
 
       //untuk body
-      body: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          //bagian tab search
-          SearchBar(),
-          SizedBox(
-            height: 8.0,
+      body: _widgetOptions.elementAt(_selectedIndex),
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+        unselectedItemColor: Colors.grey,
+        selectedItemColor: Theme.of(context).accentColor,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('home'),
           ),
-          //bagian carousel / gambar bergeser
-          Carousel(),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            title: Text('home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people),
+            title: Text('home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.games),
+            title: Text('home'),
+          ),
         ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTap,
       ),
     );
   }
