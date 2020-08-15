@@ -1,33 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:floating_search_bar/floating_search_bar.dart';
+import 'package:shoe_commerce/widgets/drawer.dart';
+import 'package:shoe_commerce/widgets/search_bar.dart';
+import 'package:shoe_commerce/widgets/carousel.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ShoeCommerce'),
+        title: Text(
+          'ShoeCommerce',
+          style: Theme.of(context).textTheme.headline1,
+        ),
         centerTitle: true,
         actions: [
-          Icon(Icons.favorite_border),
-          SizedBox(
-            width: 10,
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Icon(Icons.favorite_border),
+                SizedBox(
+                  width: 10,
+                ),
+                Icon(Icons.notifications)
+              ],
+            ),
           ),
-          Icon(Icons.shopping_cart)
         ],
       ),
 
       //untuk Drawer (widget/menu slide ke kiri)
-      drawer: Drawer(
-        child: Text('drawer'),
-      ),
+      drawer: SideDrawer(),
 
       //untuk body
-      body: FloatingSearchBar(
-          children: [],
-          // title: Text('Search anything...'),
-          trailing: Icon(Icons.search),
-          decoration: InputDecoration.collapsed(hintText: 'Search')),
+      body: Column(
+        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          //bagian tab search
+          SearchBar(),
+          SizedBox(
+            height: 8.0,
+          ),
+          //bagian carousel / gambar bergeser
+          Carousel(),
+        ],
+      ),
     );
   }
 }
