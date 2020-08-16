@@ -1,28 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:shoe_commerce/widgets/carousel.dart';
+import 'package:shoe_commerce/widgets/category.dart';
 import 'package:shoe_commerce/widgets/search_bar.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
+        //
         //bagian tab search
+        //
         SearchBar(),
-        SizedBox(
-          height: 8.0,
-        ),
+        //
         //bagian carousel / gambar bergeser
+        //
         Carousel(),
-        Text(
-          'asafjdkajdbgkjabdkjgakjbdkgjbadgadg',
-          style: TextStyle(fontFamily: 'Arial'),
+        //
+        //Text Pilih Kategori
+        //
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Pilih Kategori',
+              style: Theme.of(context).textTheme.headline2,
+            ),
+          ),
         ),
-        Text(
-          'asafjdkajdbgkjabdkjgakjbdkgjbadgadg',
-          style: Theme.of(context).textTheme.headline3,
-        ),
+        //
+        // Bagian Kategori
+        //
+        Category(),
       ],
     );
   }

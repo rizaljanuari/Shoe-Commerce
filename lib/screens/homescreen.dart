@@ -26,10 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'ShoeCommerce',
+          'ShoeCo',
           style: Theme.of(context).textTheme.headline1,
         ),
         centerTitle: true,
+        elevation: 0,
         actions: [
           Padding(
             padding: EdgeInsets.all(8.0),

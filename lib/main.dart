@@ -22,15 +22,16 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.teal,
         primaryColor: Colors.white,
-        accentColor: Colors.deepOrange,
+        accentColor: Colors.blueAccent,
 
         fontFamily: 'Poppins',
         textTheme: TextTheme(
-          headline1: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          headline2: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
-          headline3: TextStyle(fontSize: 12),
+          headline1: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
+          headline2: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, fontFamily: 'Poppins'),
+          headline3: TextStyle(fontSize: 14, fontFamily: 'Poppins', fontWeight: FontWeight.w200),
+          headline4: TextStyle(fontSize: 12, fontFamily: 'Poppins'),
 
         ),
         // This makes the visual density adapt to the platform that you run
