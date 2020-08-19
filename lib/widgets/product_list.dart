@@ -16,39 +16,41 @@ class ProductList extends StatelessWidget {
             child: Card(
               child: Hero(
                 tag: 'shoe1',
-                child: InkWell(
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (BuildContext context) => ProductDetail(),
-                    ),
-                  ),
-                  child: GridTile(
-                    header: Container(
-                      alignment: Alignment.centerRight,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.favorite_border,
-                          size: 40,
-                          color: Colors.white,
-                        ),
+                child: Material(
+                  child: InkWell(
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => ProductDetail(),
                       ),
                     ),
-                    footer: Container(
-                      color: Colors.white60,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text('Nike Adidoes'),
-                            Icon(Icons.add_shopping_cart)
-                          ],
+                    child: GridTile(
+                      header: Container(
+                        alignment: Alignment.centerRight,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(
+                            Icons.favorite_border,
+                            size: 40,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
+                      footer: Container(
+                        color: Colors.white60,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Nike Adidoes'),
+                              Icon(Icons.add_shopping_cart)
+                            ],
+                          ),
+                        ),
+                      ),
+                      child: Image.asset('assets/images/shoe1.jpg',
+                          fit: BoxFit.cover),
                     ),
-                    child: Image.asset('assets/images/shoe1.jpg',
-                        fit: BoxFit.cover),
                   ),
                 ),
               ),
@@ -58,7 +60,7 @@ class ProductList extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Card(
               child: Hero(
-                tag: 'shoe1',
+                tag: 'shoe2',
                 child: InkWell(
                   child: GridTile(
                     header: Container(
@@ -96,7 +98,7 @@ class ProductList extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Card(
               child: Hero(
-                tag: 'shoe1',
+                tag: 'shoe3',
                 child: InkWell(
                   child: GridTile(
                     header: Container(
@@ -134,7 +136,7 @@ class ProductList extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Card(
               child: Hero(
-                tag: 'shoe1',
+                tag: 'shoe4',
                 child: InkWell(
                   child: GridTile(
                     header: Container(
@@ -172,7 +174,7 @@ class ProductList extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Card(
               child: Hero(
-                tag: 'shoe1',
+                tag: 'shoe5',
                 child: InkWell(
                   child: GridTile(
                     header: Container(
@@ -210,7 +212,7 @@ class ProductList extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Card(
               child: Hero(
-                tag: 'shoe1',
+                tag: 'shoe6',
                 child: InkWell(
                   child: GridTile(
                     header: Container(
@@ -244,6 +246,23 @@ class ProductList extends StatelessWidget {
               ),
             ),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class Detail extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView(
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: Hero(
+                tag: 'shoe1', child: Image.asset('assets/images/shoe1.jpg')),
+          )
         ],
       ),
     );

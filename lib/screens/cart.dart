@@ -14,7 +14,8 @@ class Cart extends StatelessWidget {
             child: ListView(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 16.0, vertical: 4.0),
                   child: Card(
                     child: ListTile(
                       leading: Container(
@@ -65,7 +66,8 @@ class Cart extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 16.0, vertical: 4.0),
                   child: Card(
                     child: ListTile(
                       leading: Container(
@@ -182,9 +184,6 @@ class Cart extends StatelessWidget {
           icon: Icon(Icons.payment),
         ),
       ),
-      //
-      //metode pembayaran
-      //
     );
   }
 }
