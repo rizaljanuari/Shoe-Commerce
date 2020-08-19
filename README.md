@@ -1,6 +1,10 @@
 # shoe_commerce
 
-A new Flutter project.
+A shoe commerce app. Showing and selling product of shoes.
+The structure code need more improvement.
+
+Demo:
+https://youtu.be/yd7lvlJnp00
 
 ## Getting Started
 
