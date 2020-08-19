@@ -13,12 +13,12 @@ class ListOrder extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               'Status Pemesanan',
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.headline2,
               textAlign: TextAlign.center,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Card(
               child: ListTile(
                 title: Text('Kode Pesanan 7GH11DB'),
@@ -39,7 +39,7 @@ class ListOrder extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal:8.0),
             child: Card(
               child: ListTile(
                 title: Text('Kode Pesanan 46H11DB'),

@@ -14,10 +14,68 @@ class Cart extends StatelessWidget {
             child: ListView(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
                   child: Card(
                     child: ListTile(
-                      leading: Image.asset('assets/images/shoe1.jpg', fit: BoxFit.cover,),
+                      leading: Container(
+                        height: 60,
+                        width: 60,
+                        child: Image.asset(
+                          'assets/images/shoe1.jpg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      title: Text('Nike Adidoes'),
+                      subtitle: Column(
+                        children: [
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Rp. 650.000')),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              alignment: Alignment.centerRight,
+                              width: 200,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Icon(Icons.edit),
+                                  ),
+                                  InkWell(
+                                      onTap: () {},
+                                      child: Icon(Icons.remove_circle_outline)),
+                                  Text(
+                                    '1',
+                                    style:
+                                        Theme.of(context).textTheme.headline2,
+                                  ),
+                                  InkWell(
+                                      onTap: () {},
+                                      child: Icon(Icons.add_circle_outline)),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
+                  child: Card(
+                    child: ListTile(
+                      leading: Container(
+                        height: 60,
+                        width: 60,
+                        child: Image.asset(
+                          'assets/images/shoe2.jpg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                       title: Text('Nike Adidoes'),
                       subtitle: Column(
                         children: [
@@ -96,7 +154,7 @@ class Cart extends StatelessWidget {
                 Text('Detail Pembayaran'),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [Text('Estimasi harga '), Text('Rp. 650.000')],
+                  children: [Text('Estimasi harga '), Text('Rp. 1.300.000')],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,22 +162,25 @@ class Cart extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [Text('Total '), Text('Rp. 650.000')],
+                  children: [Text('Jumlah '), Text('Rp. 1.300.000')],
                 ),
                 Text(
-                  'Total : Rp. 650.000',
-                  style: Theme.of(context).textTheme.headline2,
+                  'Total : Rp. 1.300.000',
+                  style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
                 )
               ],
             ),
           )
         ],
       ),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.,
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: (){},
-        label: Text('askjfbkajsf'),
-        icon: Icon(Icons.payment),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: FloatingActionButton.extended(
+          onPressed: () {},
+          label: Text('Konfirmasi Pembayaran'),
+          icon: Icon(Icons.payment),
+        ),
       ),
       //
       //metode pembayaran

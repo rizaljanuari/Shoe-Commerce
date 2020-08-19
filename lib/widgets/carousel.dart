@@ -18,10 +18,11 @@ class Carousel extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   margin: EdgeInsets.symmetric(horizontal: 5.0),
                   decoration: BoxDecoration(color: Colors.grey),
-                  child: Text(
-                    'Text $i',
-                    style: TextStyle(fontSize: 16.0),
-                  ),
+                  // child: Text(
+                  //   'Text $i',
+                  //   style: TextStyle(fontSize: 16.0),
+                  // ),
+                  child: Image.asset('assets/images/promo$i.jpg', fit: BoxFit.cover,),
                 );
                 // return Card(
                 //   color: Colors.red,
