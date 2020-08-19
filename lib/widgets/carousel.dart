@@ -7,9 +7,10 @@ class Carousel extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12.0),
       child: Container(
-        // height: 160.0,
+        height: 140.0,
+        width: MediaQuery.of(context).size.width,
         child: CarouselSlider(
-          options: CarouselOptions(height: 160.0),
+          options: CarouselOptions(height: 160),
           items: [1, 2, 3].map((i) {
             return Builder(
               builder: (BuildContext context) {

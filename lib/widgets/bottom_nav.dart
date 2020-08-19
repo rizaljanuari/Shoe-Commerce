@@ -23,7 +23,7 @@ class _BottomNavState extends State<BottomNav> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.business),
-          title: Text('Business'),
+          title: Text('Status'),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.school),

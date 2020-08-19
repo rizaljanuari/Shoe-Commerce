@@ -5,7 +5,7 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      height: 140.0,
+      height: 110.0,
       child: ListView(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,

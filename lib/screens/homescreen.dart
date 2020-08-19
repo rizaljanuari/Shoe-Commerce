@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shoe_commerce/screens/cart.dart';
 import 'package:shoe_commerce/widgets/drawer.dart';
+import 'order_list.dart';
 import 'homepage.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,11 +13,12 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    Text('test'),
-    Text('world'),
+    ListOrder(),
+    Text('PROFIL'),
+    Text('TENTANG'),
   ];
 
-  void _onItemTap(int index){
+  void _onItemTap(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -59,23 +62,31 @@ class _HomeScreenState extends State<HomeScreen> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text('home'),
+            title: Text('BERANDA'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            title: Text('home'),
+            icon: Icon(Icons.list),
+            title: Text('STATUS'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.people),
-            title: Text('home'),
+            title: Text('PROFIL'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.games),
-            title: Text('home'),
+            icon: Icon(Icons.info),
+            title: Text('TENTANG'),
           ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) => Cart(),
+          ),
+        ),
+        child: Icon(Icons.shopping_cart),
       ),
     );
   }
